@@ -58,7 +58,7 @@ body {
     color: #2d8a55;
 }
 
-/* HERO SECTION (พร้อมฉากหลังวิดีโอขยับได้) */
+/* HERO SECTION (พื้นหลังไล่สีขยับได้แบบมีมิติ ฟิลคลิปวิดีโอ) */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -67,28 +67,15 @@ body {
     justify-content: space-between;
     padding: 120px 10% 80px;
     overflow: hidden;
+    background: linear-gradient(135deg, #f5f8f4, #dcefe1, #c8e6d2);
+    background-size: 300% 300%;
+    animation: gradientBG 10s ease infinite;
 }
 
-/* ควบคุมวิดีโอพื้นหลัง */
-.hero-video-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
-}
-
-/* เลเยอร์โปร่งแสงทับวิดีโอเพื่อให้ตัวหนังสืออ่านง่าย */
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(245, 248, 244, 0.88), rgba(220, 239, 225, 0.9));
-    z-index: -1;
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .hero-content {
