@@ -58,7 +58,7 @@ body {
     color: #2d8a55;
 }
 
-/* HERO SECTION (พื้นหลังไล่สีขยับได้แบบมีมิติ ฟิลคลิปวิดีโอ) */
+/* HERO SECTION (พื้นหลังขยับพริ้วไหวแบบ CSS ลื่นไหล ไม่หน่วงเว็บ) */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -67,12 +67,12 @@ body {
     justify-content: space-between;
     padding: 120px 10% 80px;
     overflow: hidden;
-    background: linear-gradient(135deg, #f5f8f4, #dcefe1, #c8e6d2);
-    background-size: 300% 300%;
-    animation: gradientBG 10s ease infinite;
+    background: linear-gradient(-45deg, #e8f1e9, #dcefe1, #b9e0c4, #8fba9b);
+    background-size: 400% 400%;
+    animation: waveBackground 12s ease infinite;
 }
 
-@keyframes gradientBG {
+@keyframes waveBackground {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
