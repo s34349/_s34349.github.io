@@ -58,17 +58,43 @@ body {
     color: #2d8a55;
 }
 
+/* HERO SECTION (พร้อมฉากหลังวิดีโอขยับได้) */
 .hero {
+    position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 120px 10% 80px;
-    background: linear-gradient(135deg, #f5f8f4, #dcefe1);
+    overflow: hidden;
+}
+
+/* ควบคุมวิดีโอพื้นหลัง */
+.hero-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* เลเยอร์โปร่งแสงทับวิดีโอเพื่อให้ตัวหนังสืออ่านง่าย */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(245, 248, 244, 0.88), rgba(220, 239, 225, 0.9));
+    z-index: -1;
 }
 
 .hero-content {
     max-width: 600px;
+    position: relative;
+    z-index: 1;
 }
 
 .subtitle {
@@ -103,24 +129,36 @@ body {
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(36, 107, 69, 0.2);
 }
 
 .main-button:hover {
     background: #17482f;
-    transform: translateY(-3px);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(36, 107, 69, 0.35);
 }
 
 .hero-image {
     width: 380px;
+    position: relative;
+    z-index: 1;
 }
 
+/* เอฟเฟกต์รูปโปรไฟล์ขยับลอยได้ (Floating Effect) */
 .image-frame {
     position: relative;
     padding: 15px;
     background: white;
     box-shadow: 20px 20px 0 #8fba9b;
     border-radius: 5px;
+    animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
 }
 
 .image-frame img {
@@ -232,16 +270,18 @@ body {
     gap: 25px;
 }
 
-.activity-card {
+/* เอฟเฟกต์การ์ดเด้งนูนขึ้นเมื่อเอาเมาส์ชี้ (3D Hover) */
+.activity-card, .certificate-box {
     background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-    transition: 0.3s;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.activity-card:hover {
-    transform: translateY(-8px);
+.activity-card:hover, .certificate-box:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(36, 107, 69, 0.15);
 }
 
 .activity-placeholder {
@@ -276,6 +316,12 @@ body {
     color: white;
     padding: 50px;
     border-radius: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(36, 107, 69, 0.25);
 }
 
 .project-number {
@@ -306,11 +352,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: white;
     border: 2px dashed #9db7a3;
     color: #246b45;
     font-weight: bold;
-    border-radius: 8px;
     overflow: hidden;
 }
 
@@ -337,6 +381,25 @@ body {
     margin: 20px 0;
 }
 
+.contact-details {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    color: #aeb9b0;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.contact-item:hover {
+    color: #9bd0aa;
+}
+
 footer {
     text-align: center;
     padding: 25px;
@@ -345,7 +408,7 @@ footer {
     font-size: 13px;
 }
 
-/* MOBILE */
+/* MOBILE RESPONSIVE */
 
 @media (max-width: 800px) {
 
@@ -365,7 +428,7 @@ footer {
     }
 
     .hero h1 {
-        font-size: 60px;
+        font-size: 50px;
     }
 
     .hero-image {
@@ -405,30 +468,8 @@ footer {
         font-size: 50px;
     }
 
-/* CONTACT DETAILS */
-.contact-details {
-    margin-top: 35px;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.contact-item {
-    color: #aeb9b0;
-    text-decoration: none;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-.contact-item:hover {
-    color: #9bd0aa;
-}
-
-@media (max-width: 800px) {
     .contact-details {
         flex-direction: column;
         gap: 15px;
     }
 }
-
