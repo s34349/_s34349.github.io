@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+/* ป้องกันรูปภาพทุกรูปในเว็บไซต์ไม่ให้ล้นจอหรือล้นกรอบ */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -117,7 +124,6 @@ body {
 }
 
 .image-frame img {
-    display: block;
     width: 100%;
     height: 480px;
     object-fit: cover;
@@ -252,7 +258,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
 .activity-card h3 {
@@ -313,7 +318,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    display: block;
 }
 
 .contact {
