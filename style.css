@@ -240,13 +240,19 @@ body {
 
 .activity-placeholder {
     height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: #dcefe1;
     color: #246b45;
     font-weight: bold;
     margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.activity-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .activity-card h3 {
@@ -386,9 +392,5 @@ footer {
     .contact h2 {
         font-size: 50px;
     }
-.activity-placeholder img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+
 }
