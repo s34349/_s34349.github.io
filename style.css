@@ -51,6 +51,7 @@ body {
     color: #17251b;
     font-size: 13px;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
@@ -136,7 +137,7 @@ body {
     padding: 15px;
     background: white;
     box-shadow: 20px 20px 0 #8fba9b;
-    border-radius: 5px;
+    border-radius: 8px;
     animation: floating 4s ease-in-out infinite;
 }
 
@@ -151,7 +152,7 @@ body {
     height: 480px;
     object-fit: cover;
     object-position: center top;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .section {
@@ -181,12 +182,21 @@ body {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     gap: 60px;
-    align-items: start;
+    align-items: center;
+}
+
+.about-text {
+    background: white;
+    padding: 45px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(36, 107, 69, 0.06);
+    border: 1px solid #dcece0;
 }
 
 .about-text h3 {
     font-size: 30px;
     margin-bottom: 20px;
+    color: #246b45;
 }
 
 .about-text p {
@@ -195,10 +205,24 @@ body {
 }
 
 .about-card {
-    background: #246b45;
+    background: linear-gradient(135deg, #246b45, #17482f);
     color: white;
-    padding: 35px;
-    border-radius: 8px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(36, 107, 69, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-card::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
 }
 
 .card-number {
@@ -210,6 +234,7 @@ body {
 .about-card h3 {
     font-size: 24px;
     margin-bottom: 20px;
+    letter-spacing: 1px;
 }
 
 .info-list {
@@ -218,72 +243,14 @@ body {
 }
 
 .info-list li {
-    padding: 6px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     font-size: 14px;
 }
 
 .info-list li:last-child {
     border-bottom: none;
 }
-
-/* ================= กราฟแสดงทักษะ (SKILL BARS) ================= */
-.skills-container {
-    margin-top: 40px;
-    background: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
-
-.skills-container h3 {
-    font-size: 26px;
-    margin-bottom: 25px;
-    color: #246b45;
-}
-
-.skill-box {
-    margin-bottom: 20px;
-}
-
-.skill-box:last-child {
-    margin-bottom: 0;
-}
-
-.skill-info {
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #334438;
-    font-size: 15px;
-}
-
-.skill-bar {
-    width: 100%;
-    height: 12px;
-    background: #e2ede5;
-    border-radius: 6px;
-    overflow: hidden;
-}
-
-.skill-per {
-    height: 100%;
-    background: linear-gradient(90deg, #246b45, #38a169);
-    border-radius: 6px;
-    width: 0;
-    animation: fillSkill 2s ease-in-out forwards;
-}
-
-@keyframes fillSkill {
-    from { width: 0%; }
-}
-
-/* ตั้งค่าระดับเปอร์เซ็นต์ของกราฟแต่ละอัน */
-.skill-per.math { width: 92%; }
-.skill-per.science { width: 95%; }
-.skill-per.tech { width: 88%; }
-.skill-per.env { width: 90%; }
 
 .timeline {
     max-width: 850px;
@@ -332,9 +299,10 @@ body {
 .activity-card, .certificate-box {
     background: white;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
     transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid #e5ede7;
 }
 
 .activity-card:hover, .certificate-box:hover {
@@ -370,10 +338,11 @@ body {
     display: grid;
     grid-template-columns: 120px 1fr;
     gap: 30px;
-    background: #246b45;
+    background: linear-gradient(135deg, #246b45, #17482f);
     color: white;
     padding: 50px;
-    border-radius: 10px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(36, 107, 69, 0.15);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -414,6 +383,7 @@ body {
     color: #246b45;
     font-weight: bold;
     overflow: hidden;
+    background: white;
 }
 
 .certificate-box img {
@@ -467,7 +437,6 @@ footer {
 }
 
 /* MOBILE RESPONSIVE */
-
 @media (max-width: 800px) {
     .navbar {
         padding: 15px 5%;
