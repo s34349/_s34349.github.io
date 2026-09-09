@@ -21,6 +21,7 @@ body {
     line-height: 1.7;
 }
 
+/* NAVBAR ทุกหน้า */
 .navbar {
     position: fixed;
     top: 0;
@@ -33,6 +34,391 @@ body {
     background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid #dce6dc;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #246b45;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #17251b;
+    font-size: 13px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #2d8a55;
+}
+
+/* HERO SECTION (หน้า Home) */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 10% 80px;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #e8f1e9, #dcefe1, #b9e0c4, #8fba9b);
+    background-size: 400% 400%;
+    animation: waveBackground 12s ease infinite;
+}
+
+@keyframes waveBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-content {
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+.subtitle {
+    color: #2d8a55;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 9vw, 110px);
+    line-height: 0.95;
+    letter-spacing: -4px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #2d8a55;
+}
+
+.description {
+    font-size: 18px;
+    color: #526258;
+    margin-bottom: 35px;
+}
+
+.main-button {
+    display: inline-block;
+    padding: 15px 28px;
+    background: #246b45;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(36, 107, 69, 0.2);
+}
+
+.main-button:hover {
+    background: #17482f;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(36, 107, 69, 0.35);
+}
+
+.hero-image {
+    width: 380px;
+    position: relative;
+    z-index: 1;
+}
+
+.image-frame {
+    position: relative;
+    padding: 15px;
+    background: white;
+    box-shadow: 20px 20px 0 #8fba9b;
+    border-radius: 8px;
+    animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.image-frame img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 5px;
+}
+
+/* SECTION ทั่วไปสำหรับหน้าแยก */
+.section {
+    padding: 130px 10% 90px;
+}
+
+.green-section {
+    background: #e8f1e9;
+    min-height: 100vh;
+}
+
+.section-title {
+    margin-bottom: 60px;
+}
+
+.section-title p {
+    color: #2d8a55;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-size: 48px;
+}
+
+/* ABOUT CONTENT */
+.about-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text {
+    background: white;
+    padding: 45px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(36, 107, 69, 0.06);
+    border: 1px solid #dcece0;
+}
+
+.about-text h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #246b45;
+}
+
+.about-text p {
+    margin-bottom: 18px;
+    color: #526258;
+}
+
+.about-card {
+    background: linear-gradient(135deg, #246b45, #17482f);
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(36, 107, 69, 0.2);
+}
+
+.card-number {
+    font-size: 40px;
+    opacity: 0.4;
+    margin-bottom: 5px;
+}
+
+.about-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+}
+
+.info-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 14px;
+}
+
+.info-list li:last-child {
+    border-bottom: none;
+}
+
+/* TIMELINE (Education) */
+.timeline {
+    max-width: 850px;
+    border-left: 3px solid #7ca98a;
+    padding-left: 35px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -47px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background: #2d8a55;
+    border-radius: 50%;
+    border: 4px solid #e8f1e9;
+}
+
+.timeline-content span {
+    color: #2d8a55;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.timeline-content h3 {
+    font-size: 25px;
+    margin: 8px 0;
+}
+
+.timeline-content p {
+    color: #526258;
+}
+
+/* GRIDS (Activities / Certificates) */
+.activity-grid, .certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.activity-card, .certificate-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition: transform 0.4s ease;
+    border: 1px solid #e5ede7;
+}
+
+.activity-card:hover, .certificate-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(36, 107, 69, 0.15);
+}
+
+.activity-placeholder {
+    height: 200px;
+    background: #dcefe1;
+    color: #246b45;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.activity-placeholder img, .certificate-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.certificate-box {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #9db7a3;
+}
+
+.certificate-box img {
+    object-fit: contain;
+}
+
+/* PROJECTS */
+.project-card {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 30px;
+    background: linear-gradient(135deg, #246b45, #17482f);
+    color: white;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(36, 107, 69, 0.15);
+}
+
+.project-number {
+    font-size: 70px;
+    opacity: 0.4;
+}
+
+.project-type {
+    color: #b9e0c4;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.project-card h3 {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+/* CONTACT PAGE */
+.contact {
+    text-align: center;
+    padding: 140px 20px 100px;
+    background: #17251b;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact p:first-child {
+    color: #9bd0aa;
+    letter-spacing: 4px;
+}
+
+.contact h2 {
+    font-size: 70px;
+    margin: 20px 0;
+}
+
+.contact-details {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    color: #aeb9b0;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.contact-item:hover {
+    color: #9bd0aa;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #101812;
+    color: #aeb9b0;
+    font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+    .navbar { padding: 15px 5%; }
+    .nav-links { display: none; }
+    .hero { flex-direction: column; text-align: center; gap: 50px; padding: 120px 7% 70px; }
+    .hero h1 { font-size: 50px; }
+    .hero-image { width: 280px; }
+    .about-content, .activity-grid, .certificate-grid, .project-card { grid-template-columns: 1fr; }
+    .project-card { padding: 35px; }
+    .contact h2 { font-size: 50px; }
 }
 
 .logo {
