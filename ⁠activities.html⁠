@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanathun Jaihan | Activities & Certificates</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">S34349.</div>
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="education.html">EDUCATION</a>
+            <a href="activities.html" class="active">ACTIVITIES & CERTS</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- ส่วนกิจกรรม -->
+    <section class="section">
+        <div class="section-title">
+            <p>03 — ACTIVITIES</p>
+            <h2>MY ACTIVITIES</h2>
+        </div>
+        <div class="activity-grid">
+            <div class="activity-card">
+                <div class="activity-placeholder">
+                    <img src="images/activity1.JPG" alt="กิจกรรมโรงเรียน">
+                </div>
+                <h3>กิจกรรมโรงเรียน</h3>
+                <p>เป็นผู้ดูแลฐานกิจกรรม Astronomy ให้ความรู้แก่คนในโรงเรียน</p>
+            </div>
+            <div class="activity-card">
+                <div class="activity-placeholder">
+                    <img src="images/activity2.JPG" alt="กิจกรรมจิตอาสา">
+                </div>
+                <h3>กิจกรรมจิตอาสา</h3>
+                <p>เข้าร่วมกิจกรรมอนุรักษ์ธรรมชาติกับศูนย์ชีวพนาเวศน์</p>
+            </div>
+            <div class="activity-card">
+                <div class="activity-placeholder">
+                    <img src="images/activity3.JPG" alt="กิจกรรมโรงเรียน">
+                </div>
+                <h3>กิจกรรมวิชาการ</h3>
+                <p>ทำโครงงานวิชาการ IS ไบโอพลาสติกชีวภาพ</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ส่วนเกียรติบัตร (ต่อกันในหน้าเดียว) -->
+    <section class="section green-section" style="min-height: auto;">
+        <div class="section-title">
+            <p>04 — CERTIFICATES</p>
+            <h2>MY CERTIFICATES</h2>
+        </div>
+        <div class="certificate-grid">
+            <div class="certificate-box">
+                <img src="images/certificate1.JPG" alt="Certificate 1">
+            </div>
+            <div class="certificate-box">
+                <img src="images/certificate2.JPG" alt="Certificate 2">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Thanathun Jaihan</p>
+    </footer>
+</body>
+</html>
 
