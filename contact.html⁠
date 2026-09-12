@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanathun Jaihan | Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">S34349.</div>
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="education.html">EDUCATION</a>
+            <a href="activities.html">ACTIVITIES & CERTS</a>
+            <a href="contact.html" class="active">CONTACT</a>
+        </div>
+    </nav>
+
+    <section class="contact">
+        <p>LET'S CONNECT</p>
+        <h2>THANK YOU</h2>
+        <p>Thanathun Jaihan</p>
+
+        <div class="contact-details">
+            <a href="tel:0842754482" class="contact-item">📞 เบอร์โทร: 084-275-4482</a>
+            <a href="https://instagram.com/__jjeaat" target="_blank" class="contact-item">📸 IG: __jjeaat</a>
+            <span class="contact-item">👤 FB: Thanathan Ja</span>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Thanathun Jaihan</p>
+    </footer>
+</body>
+</html>
 
